@@ -1,0 +1,72 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.modal-content {
+  background-color: #3a3f4a; /* Match app container background */
+  color: #e2e8f0; /* Light text */
+  padding: 30px 40px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 500px; /* Limit modal width */
+  max-height: 80vh; /* Limit modal height */
+  overflow-y: auto; /* Add scroll if content overflows */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #61dafb; /* React blue for title */
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+.modal-close-button:hover {
+    color: #fff;
+}
+
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-content li {
+  padding: 8px 0;
+  border-bottom: 1px solid #555; /* Separator lines */
+  display: flex;
+  align-items: center;
+}
+.modal-content li:last-child {
+  border-bottom: none;
+}
+
+.flag-image {
+  margin-right: 15px;
+  width: 30px;
+  height: auto;
+  text-align: center;
+  vertical-align: middle;
+} 

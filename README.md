@@ -1,12 +1,43 @@
-# React + Vite
+# World Timezone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple interactive React application to visualize and compare times across different UTC offsets.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   Displays 24 timezone inputs (UTC-11 to UTC+12) in a 4x6 grid.
+*   Interactively update the time in one timezone, and all others update accordingly.
+*   Dynamic background colors for each timezone block based on the local hour (Day/Dawn/Dusk/Night).
+*   "Sync to Live Time" button to set all timezones to the current time.
+*   Hover over a timezone block to see example countries/regions for that UTC offset.
+*   Dark theme UI.
 
-## Expanding the ESLint configuration
+## Running the Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Prerequisites:**
+    *   Node.js (which includes npm)
+    *   pnpm (Install with `npm install -g pnpm` if you don't have it)
+
+2.  **Clone the repository (if applicable):**
+    ```bash
+    # git clone <repository-url>
+    # cd world-timezone
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    pnpm install
+    ```
+
+4.  **Start the development server:**
+    ```bash
+    pnpm dev
+    ```
+
+    The application should now be running on `http://localhost:5173` (or the next available port).
+
+## Technologies Used
+
+*   React
+*   Vite
+*   CSS
+*   pnpm
