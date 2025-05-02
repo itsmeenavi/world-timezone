@@ -149,3 +149,20 @@ h1 {
 .live-sync-button:hover {
   background-color: #52c7e8; /* Slightly lighter blue on hover */
 }
+
+footer {
+  text-align: center;
+  margin-top: 40px; /* Space above the footer */
+  padding: 15px;
+  color: #aaa; /* Lighter text color for footer */
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #61dafb; /* React blue for link */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

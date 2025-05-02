@@ -50,6 +50,11 @@ function App() {
          Reference UTC Time: {referenceTime.toISOString()}
        </div>
     </div>
+    <footer>
+        Created by <a href="https://github.com/itsmeenavi" target="_blank" rel="noopener noreferrer">
+          itsmeenavi
+        </a>
+    </footer>
     </>
   );
 }
