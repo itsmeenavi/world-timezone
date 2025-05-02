@@ -1,0 +1,134 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #282c34;
+  margin: 0;
+  padding: 20px;
+  color: #e2e8f0;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #3a3f4a;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #61dafb;
+  margin-bottom: 0;
+}
+
+.timezones-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */ /* Responsive grid */
+  grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns */
+  gap: 20px;
+}
+
+.timezone-input {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  border: 1px solid #555;
+}
+
+.timezone-input label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: inherit;
+  font-size: 0.9em;
+}
+
+.timezone-input input[type="time"] {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2em;
+  text-align: center;
+  background-color: transparent; /* Let parent div control background */
+  color: inherit; /* Inherit text color from parent */
+  cursor: pointer;
+}
+
+/* Remove browser default spinner/arrows for time input if needed */
+.timezone-input input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.timezone-input input[type="time"]::-webkit-inner-spin-button,
+.timezone-input input[type="time"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.timezone-input input[type="time"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+/* Styling for the debug UTC time */
+.utc-debug-time {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    font-family: monospace;
+    color: #999;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Style for the displayed date/time (REMOVING) */
+/*
+.timezone-input .display-datetime {
+  font-size: 0.9em;
+  color: inherit; 
+  margin-bottom: 10px; 
+  opacity: 0.8; 
+}
+*/
