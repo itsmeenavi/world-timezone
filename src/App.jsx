@@ -12,6 +12,10 @@ function App() {
   // Handler function to update the reference time
   // It receives the new time (as Date obj) calculated from a specific input's offset
   const handleTimeChange = useCallback((newTimeUtc) => {
+    // Disable live sync if manual change occurs
+    // TODO: Maybe add a state variable like isLive? For now, just updating resets.
+    // setIsLive(false);
+
     if (newTimeUtc instanceof Date && !isNaN(newTimeUtc)) {
         setReferenceTime(newTimeUtc);
     } else {
@@ -19,10 +23,17 @@ function App() {
     }
   }, []);
 
+  // Function to set reference time to the current time
+  const syncToLive = () => {
+    setReferenceTime(new Date());
+    // Optionally, re-enable live sync state if implemented:
+    // setIsLive(true);
+  };
 
   return (
     <> {/* Fragment to hold title and container */}
       <h1>World Timezone</h1>
+      <button onClick={syncToLive} className="live-sync-button">Sync to Live Time</button>
     <div className="app-container">
       <div className="timezones-grid">
         {timezoneOffsets.map(offset => (

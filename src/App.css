@@ -132,3 +132,20 @@ h1 {
   opacity: 0.8; 
 }
 */
+
+.live-sync-button {
+  display: block; /* Make it a block element */
+  margin: 15px auto; /* Center it horizontally with some vertical space */
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #61dafb; /* React blue */
+  color: #282c34; /* Dark text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.live-sync-button:hover {
+  background-color: #52c7e8; /* Slightly lighter blue on hover */
+}
